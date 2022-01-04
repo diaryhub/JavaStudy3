@@ -9,12 +9,15 @@ public class StudentMain {
 		
 		StudentUtil su = new StudentUtil();
 		
-		Student stu = su.makeStudent();
+		Student [] stus = su.makeStudents();
+		
 		
 		System.out.println("이름\t번호\t국어\t영어\t수학");
 		System.out.println("====================================");
-		System.out.println(stu.name+"\t"+stu.num+"\t"+stu.kor+"\t"+stu.eng+"\t"+stu.math);
-		
+		for(int i=0;i<stus.length;i++) 
+		{
+		System.out.println(stus[i].name+"\t"+stus[i].num+"\t"+stus[i].kor+"\t"+stus[i].eng+"\t"+stus[i].math+"\n");
+		}
 		
 	}
 
