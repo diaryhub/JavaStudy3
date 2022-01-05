@@ -20,8 +20,8 @@ public class StudentView {
 		System.out.println("수학:"+stu.math);
 		
 	}
-	public void viewStudents(Student [] stus, int count) {
-		for(int i=0;i<count;i++) {
+	public void viewStudents(Student [] stus) {
+		for(int i=0;i<stus.length;i++) {
 		System.out.println("이름:"+stus[i].name);
 		System.out.println("번호:"+stus[i].num);
 		System.out.println("국어:"+stus[i].kor);

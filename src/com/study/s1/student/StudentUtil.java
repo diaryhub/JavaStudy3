@@ -73,26 +73,27 @@ public class StudentUtil {
 		// 리턴
 		System.out.println("학생 번호 입력:");
 
-		int num = sc.nextInt();
-
 		Student stu = new Student();
 
 		boolean exit = true;
 		while (exit) {
+			
+			int num = sc.nextInt();
+			
 			for (int i = 0; i < stus.length; i++) {
 
 				if (num == stus[i].num) {
 
 					System.out.println("찾았습니다.");
-					
+
 					stu = stus[i];
 
 					exit = false;
 
 					break;
-				
+
 				}
-				
+
 			}
 
 			if (exit) {
