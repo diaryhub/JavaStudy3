@@ -65,4 +65,42 @@ public class StudentUtil {
 		return stus;
 	}
 
+	public Student search(Student[] stus) {
+
+		Scanner sc = new Scanner(System.in);
+		// 학생 번호 입력
+		// 입력받은 번호와 일치하는 학생 탐색
+		// 리턴
+		System.out.println("학생 번호 입력:");
+
+		int num = sc.nextInt();
+
+		Student stu = new Student();
+
+		boolean exit = true;
+		while (exit) {
+			for (int i = 0; i < stus.length; i++) {
+
+				if (num == stus[i].num) {
+
+					System.out.println("찾았습니다.");
+					
+					stu = stus[i];
+
+					exit = false;
+
+					break;
+				
+				}
+				
+			}
+
+			if (exit) {
+				System.out.println("재입력");
+			}
+		}
+		return stu;
+
+	}
+
 }
